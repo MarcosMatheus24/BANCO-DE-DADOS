@@ -1,0 +1,26 @@
+create table destribuidora(Nome varchar(50),ModelosCarro varchar(50),cor varchar(50),preco double);
+
+insert into destribuidora values("sharecars","Gol","azul",50000);
+
+create table Carros(CarrosId integer NOT NULL, primary key(CarrosId),Modelo varchar(50),cor varchar(50),preco double);
+
+insert into Carros values(467,"peugeot","preto",80000000);
+insert into Carros values(464,"mercedes","azul",60000000);
+insert into Carros values(465,"audi","verde",40000000);
+insert into Carros values(463,"volksvagen","preto",20000000);
+
+create table concessionaria(Nome varchar(50), ModelosCarro varchar(50),cor varchar (50),preco double,CLienteCPF varchar(50));
+
+insert into concessionaria values ("carsales","peugeot","branco",5000000,84956374829365);
+
+create table Clientes(ClienteID int not null,CLienteCPF varchar(14) not null,ClienteNome varchar(50) not null,ClienteEmail text not null);
+
+insert into Clientes values(7583,44346677889965,"yuri da silva","yurisilva@gmail.com");
+insert into Clientes values(8846,14355377825365,"matheus da silva","matheussilva@gmail.com");
+insert into Clientes values(7863,84955777899365,"gabriel da silva","gabrielsilva@gmail.com");
+insert into Clientes values(5684,84955376829765,"luis da silva","luissilva@gmail.com");
+
+select * from Clientes;
+select * from concessionaria;
+select * from Carros;
+select * from destribuidora
