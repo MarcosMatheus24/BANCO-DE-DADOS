@@ -1,0 +1,13 @@
+create schema personagem;
+use personagem;
+create table status( 
+vida double not null,
+stamina double not null,
+nome varchar(50)
+);
+insert into status values(
+50, 
+80,
+"Sasaki Haise"
+);
+select * from status;
