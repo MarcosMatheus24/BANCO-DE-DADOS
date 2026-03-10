@@ -1,0 +1,26 @@
+create table Pacientes (
+CPF varchar(14) primary key not null unique,
+nome varchar(254),
+Data_Nascimento date,
+telefone varchar(250)
+);
+insert into Pacientes values ("45372849104637", "Paciente 1", "2008-03-13", "376437853");
+select * from Pacientes;
+create table Medicos (
+CRM int auto_increment primary key not null unique,
+nome varchar(254),
+especialidade varchar(254)
+);
+insert into Medicos(nome, especialidade) values("DR 1", "Cardiologista");
+select * from Medicos;
+create table Consultas(
+CPF_Pacientes varchar(14) unique unique not null,
+foreign key (CPF_Pacientes) references Pacientes(CPF),
+Data_consultas date,
+Diagnosticos varchar(254),
+CRM_Medico int auto_increment unique not null,
+foreign key (CRM_Medico) references Medicos(CRM) 
+);
+insert into Consultas values ("45372849104637", "2026-03-10", "Virose");
+select * from Consultas;
+drop table Constultas;
